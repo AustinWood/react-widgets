@@ -1,9 +1,10 @@
 import React from 'react';
+import Header from './header';
 
 class Tabs extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { selectedTab: 0 };
+    this.state = { selectedTab: "Бабушка" };
     this.content = {
       "Бабушка": "Женщина, имеющая внуков. В разговорной речи часто просто пожилая женщина.",
       "Гопник": "Жаргонное слово русского языка, обозначающее представителей городской прослойки низкого социального статуса, малообразованной, агрессивно настроенной молодёжи",
@@ -13,13 +14,9 @@ class Tabs extends React.Component {
 
   render() {
     return(
-      <ul>
-        {
-          Object.keys(this.content).map(function (key) {
-            return <li key={key}>{key}</li>;
-          })
-        }
-      </ul>
+      <div>
+        <Header content={this.content}/>
+      </div>
     );
   }
 }
