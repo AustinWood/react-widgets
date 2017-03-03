@@ -1,7 +1,5 @@
 import React from 'react';
 
-// const Tabs = () => <h1>Yeah, tabs!</h1>;
-
 class Tabs extends React.Component {
   constructor(props) {
     super(props);
@@ -10,9 +8,11 @@ class Tabs extends React.Component {
 
   render() {
     return(
-      <div>
-        <p>rendered from Tabs component!</p>
-      </div>
+      <ul>
+        <li>Бабушка</li>
+        <li>Гопник</li>
+        <li>Матрёшка</li>
+      </ul>
     );
   }
 }
